@@ -16,7 +16,7 @@
       @content;
     }
   } @else if $breakpoint == desktop {
-    @media (max-width: 1450px) {
+    @media (max-width: 1550px) {
       @content;
     }
   } @else if $breakpoint == xlarge {
