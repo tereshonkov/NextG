@@ -1,0 +1,284 @@
+@use "mixins";
+@use "variables";
+@use "reset";
+
+body {
+  font-family: variables.$font-base;
+  font-size: variables.$text-base;
+  max-width: 1920px;
+  width: 100%;
+}
+
+header {
+  position: relative;
+  background: variables.$bg-color;
+}
+.bg-hero {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 390px;
+  &__logo {
+    display: block;
+    width: 161px;
+    height: 40px;
+    background-color: rgba(196, 196, 196, 1);
+  }
+  &__nav-container {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+  }
+  &__nav-item > a {
+    font-size: variables.$text-small;
+    color: variables.$text-color;
+    &:hover {
+      color: variables.$text-h-color;
+    }
+  }
+  &__nav-btn {
+    @include mixins.btn;
+  }
+}
+
+.hero {
+  position: relative;
+  z-index: 5;
+  margin-top: 56px;
+  @include mixins.padding;
+  @include mixins.flex-center;
+  gap: 88px;
+  &__image {
+    max-width: 496px;
+    border-radius: 8px 8px 8px 0;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 555px;
+  }
+  &__mask {
+    font-family: variables.$font-heading;
+    font-size: variables.$text-small;
+    color: variables.$secondary-color;
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-size: variables.$text-h1;
+    color: variables.$text-h-color;
+    font-family: variables.$font-heading;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  &__subtitle {
+    font-size: variables.$text-base;
+    color: variables.$text-color;
+    margin-bottom: 54px;
+  }
+  &__btns-container {
+    display: flex;
+    gap: 24px;
+  }
+  &__btn--active {
+    @include mixins.btn;
+  }
+  &__btn {
+    color: variables.$secondary-color;
+    border: 1px solid variables.$secondary-color;
+    background-color: transparent;
+    font-size: variables.$text-small;
+    border-radius: 8px;
+    padding: 8px 24px;
+    font-family: variables.$font-heading;
+  }
+}
+
+.services {
+  @include mixins.flex-center;
+  gap: 31px;
+  padding: 72px 390px;
+  background: variables.$bg-color;
+  &__item {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    max-width: 270px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &__title {
+    font-size: variables.$text-h3;
+    color: variables.$text-h-color;
+    font-weight: 700;
+    max-width: 200px;
+  }
+  &__subtitle {
+    font-size: variables.$text-base;
+    color: variables.$text-color;
+    line-height: 22px;
+    max-width: 194px;
+  }
+}
+
+.about {
+  max-width: 1140px;
+  padding: 61px 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  &__respirators {
+    display: flex;
+    gap: 44px;
+  }
+  &__respirators-content {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+  &__title {
+    font-size: variables.$text-h2;
+    color: variables.$text-h-color;
+    font-weight: 700;
+    font-family: variables.$font-heading;
+  }
+  &__description {
+    font-size: variables.$text-base;
+    color: variables.$text-color;
+    line-height: 30px;
+  }
+  &__description span {
+    font-weight: 700;
+    color: variables.$text-h-color;
+  }
+  &__in-industrial {
+    display: flex;
+    gap: 44px;
+  }
+  &__in-industrial-content {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+}
+
+.info {
+  padding: 80px 0;
+  margin: 0 auto;
+  max-width: 1140px;
+  display: flex;
+  & > img {
+    width: 570px;
+    height: 616px;
+  }
+  &__card-one {
+    @include mixins.flex-center;
+    padding: 80px 30px;
+    width: 285px;
+    height: 332px;
+  }
+  &__card-one p {
+    font-size: variables.$text-small;
+    color: variables.$text-color;
+    line-height: 24px;
+  }
+  &__card-two {
+    @include mixins.flex-center;
+    padding: 80px 30px;
+    width: 285px;
+    height: 332px;
+    background: variables.$primary-color;
+    border-radius: 0 20px 0 0;
+  }
+  &__card-two p {
+    font-size: variables.$text-small;
+    color: variables.$text-white;
+    line-height: 24px;
+  }
+  &__group {
+    display: flex;
+  }
+  &__image {
+    position: relative;
+  }
+  &__card-three {
+    @include mixins.flex-center;
+    padding: 80px 30px;
+    width: 285px;
+    height: 332px;
+    background: variables.$primary-color;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  &__card-three p {
+    font-size: variables.$text-small;
+    color: variables.$text-white;
+    line-height: 24px;
+  }
+  &__card-four {
+    padding: 45px 38px;
+    background: variables.$secondary-color;
+    min-height: 286px;
+    border-radius: 0 0 20px 0;
+  }
+  &__title {
+    font-size: variables.$text-h3;
+    color: variables.$text-h-color;
+    margin-bottom: 5px;
+    font-family: variables.$font-heading;
+    font-weight: 700;
+  }
+  &__subtitle {
+    font-size: variables.$text-small;
+    color: variables.$text-color;
+    line-height: 24px;
+    margin-bottom: 26px;
+  }
+  &__cta {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn {
+    color: variables.$primary-color;
+    border: 1px solid variables.$primary-color;
+    background-color: transparent;
+    font-size: variables.$text-small;
+    border-radius: 8px;
+    padding: 8px 24px;
+    font-family: variables.$font-heading;
+    max-height: 46px;
+    cursor: pointer;
+  }
+  &__contact {
+    display: flex;
+    gap: 13px;
+  }
+  &__contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  &__contact-title {
+    color: variables.$primary-color;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  &__phone {
+    color: variables.$text-h-color;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
