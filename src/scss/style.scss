@@ -101,6 +101,22 @@ header {
   }
 }
 
+main {
+  position: relative;
+}
+.figure-item {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  z-index: 0;
+}
+.figure-item-2 {
+  position: absolute;
+  top: 32%;
+  right: 0;
+  z-index: 0;
+}
+
 .services {
   @include mixins.flex-center;
   gap: 31px;
@@ -111,6 +127,7 @@ header {
     align-items: start;
     gap: 20px;
     max-width: 270px;
+    height: 165px;
   }
   &__content {
     display: flex;
@@ -138,6 +155,8 @@ header {
   display: flex;
   flex-direction: column;
   gap: 80px;
+  position: relative;
+  z-index: 5;
   &__respirators {
     display: flex;
     gap: 44px;
@@ -165,6 +184,7 @@ header {
   &__in-industrial {
     display: flex;
     gap: 44px;
+    position: relative;
   }
   &__in-industrial-content {
     display: flex;
@@ -175,10 +195,19 @@ header {
 
 .info {
   padding: 80px 0;
-  margin: 0 auto;
-  max-width: 1140px;
-  display: flex;
-  & > img {
+  position: relative;
+  z-index: 5;
+  background: linear-gradient(
+    to bottom,
+    transparent 0 50%,
+    rgba(245, 252, 250, 1) 50% 100%
+  );
+  &__content-main {
+    margin: 0 auto;
+    max-width: 1140px;
+    display: flex;
+  }
+  &__image-item {
     width: 570px;
     height: 616px;
   }
@@ -248,7 +277,7 @@ header {
   }
   &__cta {
     display: flex;
-    justify-content: space-between;
+    gap: 40px;
   }
   &__btn {
     color: variables.$primary-color;
@@ -281,15 +310,26 @@ header {
     font-size: 24px;
     line-height: 24px;
   }
+  &__line {
+    display: block;
+    width: 1px;
+    height: 46px;
+    background-color: rgba(255, 255, 255, 1);
+  }
 }
 
 .sertification {
   padding: 80px 0;
-  margin: 0 auto;
-  max-width: 1140px;
-  display: flex;
-  align-items: center;
-  gap: 87px;
+  background: variables.$bg-color;
+  position: relative;
+  z-index: 5;
+  &__main-content {
+    margin: 0 auto;
+    max-width: 1140px;
+    display: flex;
+    align-items: center;
+    gap: 87px;
+  }
   &__group {
     display: flex;
     align-items: center;
@@ -311,4 +351,197 @@ header {
     gap: 100px;
     align-items: center;
   }
+}
+
+.reasons {
+  padding-bottom: 394px;
+  border-bottom-left-radius: 150px;
+  background: variables.$bg-color;
+  position: relative;
+  z-index: 5;
+  &__main-content {
+    display: flex;
+    gap: 87px;
+    margin: 0 auto;
+    max-width: 1140px;
+  }
+  &__img {
+    width: 400px;
+    border-radius: 16px 16px 16px 0;
+  }
+  &__title {
+    font-size: variables.$text-h2;
+    color: variables.$text-h-color;
+    font-weight: 700;
+    font-family: variables.$font-heading;
+    margin-bottom: 24px;
+  }
+  &__subtitle {
+    font-size: variables.$text-base;
+    color: variables.$text-color;
+    line-height: 30px;
+    margin-bottom: 40px;
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 26px;
+  }
+  &__card {
+    display: flex;
+    gap: 24px;
+    max-width: 312px;
+    height: 141px;
+  }
+  &__card img {
+    width: 56px;
+    height: 56px;
+  }
+  &__review {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -100px;
+    @include mixins.flex-center;
+  }
+}
+.getone {
+  padding: 88px 230px;
+  margin: 100px auto;
+  max-width: 1140px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  &__title {
+    font-size: 28px;
+    color: variables.$text-h-color;
+    font-weight: 700;
+    font-family: variables.$font-heading;
+  }
+  &__subtitle {
+    font-size: variables.$text-base;
+    color: variables.$text-color;
+    line-height: 30px;
+    text-align: center;
+  }
+  &__btn {
+    @include mixins.btn;
+  }
+}
+.contacts {
+  background: variables.$secondary-color;
+  &__main-content {
+    margin: 0 auto;
+    max-width: 1140px;
+    display: flex;
+    justify-content: space-between;
+    padding: 41px 0;
+  }
+  &__line {
+    display: block;
+    width: 1px;
+    height: 46px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+  }
+  &__title {
+    font-size: variables.$text-h3;
+    color: variables.$text-h-color;
+    margin-bottom: 1px;
+    font-weight: 500;
+  }
+  &__subtitle {
+    font-size: variables.$text-small;
+    color: variables.$text-h-color;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background: variables.$bg-color;
+}
+.footer {
+  margin: 14px auto;
+  width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  padding: 73px 0 0 0;
+  &__logo-block {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    max-width: 340px;
+  }
+  &__logo {
+    display: block;
+    width: 161px;
+    height: 40px;
+    background-color: rgba(196, 196, 196, 1);
+  }
+  &__description {
+    font-size: variables.$text-small;
+    color: variables.$text-color;
+    line-height: 24px;
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  &__title {
+    font-size: variables.$text-h3;
+    color: variables.$text-h-color;
+    margin-bottom: 7px;
+    font-weight: 500;
+    font-family: variables.$font-heading;
+  }
+  &__menu-link {
+    font-size: variables.$text-small;
+    color: variables.$text-color;
+    &:hover {
+      color: variables.$text-h-color;
+    }
+  }
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  &__item img {
+    width: 20px;
+    height: 20px;
+  }
+  &__item p {
+    font-size: variables.$text-small;
+    color: variables.$text-color;
+    &:hover {
+      color: variables.$text-h-color;
+    }
+  }
+}
+.line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(225, 230, 236, 1);
+  margin-bottom: 33px;
+}
+.copyright {
+  text-align: center;
+  font-size: variables.$text-small;
+  color: variables.$text-color;
+  margin-bottom: 30px;
 }
