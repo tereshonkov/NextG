@@ -14,7 +14,7 @@
 
         <div class="services__item">
           <div class="services__logo">
-            <img src="/src/img/inspection.svg" alt="Inspection Services" />
+            <img src="<?php echo get_template_directory_uri(); ?>/images/inspection.svg" alt="Inspection Services" />
           </div>
           <div class="services__content">
             <h3 class="services__title">Multi-Point Inspection</h3>

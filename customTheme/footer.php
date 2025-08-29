@@ -27,23 +27,23 @@
         <ul class="footer__socials">
           <h3 class="footer__title">Follow Us</h3>
           <a class="footer__item" href="#">
-            <img src="./src/img/facebook.png" alt="facebook">
-            <p>Facebbok</p>
+            <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" alt="facebook">
+            <p>Facebook</p>
           </a>
           <a class="footer__item" href="#">
-            <img src="./src/img/twitter.png" alt="facebook">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png" alt="twitter">
             <p>Twitter</p>
           </a>
           <a class="footer__item" href="#">
-            <img src="./src/img/google.png" alt="facebook">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/google.png" alt="google">
             <p>Google +</p>
           </a>
           <a class="footer__item" href="#">
-            <img src="./src/img/youtube.png" alt="facebook">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/youtube.png" alt="youtube">
             <p>YouTube</p>
           </a>
           <a class="footer__item" href="#">
-            <img src="./src/img/linkedin.png" alt="facebook">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/linkedin.png" alt="linkedin">
             <p>Linkedin</p>
           </a>
         </ul>

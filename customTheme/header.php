@@ -10,13 +10,13 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="/dist/css/style.css" />
+       <?php wp_head() ?>
 </head>
 
 <body>
   <header>
     <section class="header">
-      <div class="header__logo"></div>
+      <div class="header__logo"><?php the_custom_logo(); ?></div>
       <nav class="header__nav">
         <ul class="header__nav-container">
           <li class="header__nav-item">
