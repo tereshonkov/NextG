@@ -642,16 +642,16 @@ main {
   }
   @include mixins.response(desktop) {
     &__cards {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       row-gap: 20px;
-      align-items: center;
+      // align-items: center;
     }
     &__card {
-      max-width: 100%;
+      // max-width: 100%;
       height: auto;
-      flex-direction: column;
+      // flex-direction: column;
       align-items: center;
-      text-align: center;
+      // text-align: center;
     }
     &__card img {
       width: 40px;
@@ -686,7 +686,7 @@ main {
       height: auto;
     }
     &__cards {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       row-gap: 20px;
       align-items: center;
     }
@@ -714,6 +714,16 @@ main {
     }
     &__subtitle {
       text-align: center;
+    }
+  }
+  @include mixins.response(mobile) {
+    &__main-content {
+      padding: 0 24px;
+    }
+    &__cards {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+      align-items: center;
     }
   }
 }
@@ -811,7 +821,7 @@ main {
     &__main-content {
       align-items: center;
       gap: 20px;
-      text-align: center;
+      // text-align: center;
       width: 100%;
       padding: 20px;
     }
@@ -819,14 +829,17 @@ main {
       display: none;
     }
   }
-  @include mixins.response(tablet) {
+  @include mixins.response(mobile) {
     &__main-content {
       flex-direction: column;
       align-items: center;
       gap: 20px;
-      text-align: center;
+      // text-align: center;
       width: 100%;
       padding: 20px;
+    }
+    &__item {
+      width: 100%;
     }
     &__line {
       display: none;
