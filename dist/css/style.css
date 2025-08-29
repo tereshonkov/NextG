@@ -98,6 +98,11 @@ header {
   height: 40px;
   background-color: rgb(196, 196, 196);
 }
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
 .header__nav-container {
   display: flex;
   align-items: center;

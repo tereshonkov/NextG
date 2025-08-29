@@ -10,7 +10,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
     rel="stylesheet" />
-       <?php wp_head() ?>
+  <?php wp_head() ?>
 </head>
 
 <body>
@@ -18,24 +18,13 @@
     <section class="header">
       <div class="header__logo"><?php the_custom_logo(); ?></div>
       <nav class="header__nav">
-        <ul class="header__nav-container">
-          <li class="header__nav-item">
-            <a class="header__item" href="#">Home</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__item" href="#">About</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__item" href="#">Product</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__item" href="#">Contact</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__item" href="#">History</a>
-          </li>
-          <button class="header__nav-btn">Contact us</button>
-        </ul>
+        <?php wp_nav_menu([
+          'theme_location' => 'header-menu',
+          'container'      => false,
+          'menu_class'     => 'header__nav-container',
+        ]); ?>
+
+        <button class="header__nav-btn">Contact us</button>
       </nav>
     </section>
     <section class="hero">
