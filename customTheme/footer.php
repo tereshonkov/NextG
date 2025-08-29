@@ -28,7 +28,7 @@
           <h3 class="footer__title">Follow Us</h3>
           <a class="footer__item" href="#">
             <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" alt="facebook">
-            <p>Facebook</p>
+            <p>Facebbok</p>
           </a>
           <a class="footer__item" href="#">
             <img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png" alt="twitter">
@@ -51,5 +51,6 @@
       <div class="line"></div>
       <p class="copyright">Copyright © 2020 N95</p>
     </footer>
+    <?php wp_footer(); ?>
   </body>
 </html>
